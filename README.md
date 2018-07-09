@@ -23,7 +23,7 @@ function showQuote() {        //A function to get the quote to show.
       return response.json();       //We turn the data into readable JSON data!
     })                              //The data transfers over to the next functions. Thanks .then!
     .then(function manipulateHTML(randomQuote) {        // Here, this function is meant to literally manipulate HTML. Watch...
-      document.querySelector('.quote-text').textContent = randomQuote.quote;  //The section on the HTML with the class named .quote-text                                                                                    is made to inherit the random API quote!
+      document.querySelector('.quote-text').textContent = randomQuote.quote;  //The section on the HTML with the class named .quote-text is made to inherit the random API quote!
       
       document.querySelector('.quote-author').textContent = randomQuote.author;   //The section on the HTML with the class named .quote-                                                                                        author is changed
       
