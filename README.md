@@ -23,22 +23,23 @@ function showQuote() {        //A function to get the quote to show.
       return response.json();       //We turn the data into readable JSON data!
     })                              //The data transfers over to the next functions. Thanks .then!
     .then(function manipulateHTML(randomQuote) {        // Here, this function is meant to literally manipulate HTML. Watch...
-      document.querySelector('.quote-text').textContent = randomQuote.quote;  //The section on the HTML with the class named .quote-text is made to inherit the random API quote!
+      document.querySelector('.quote-text').textContent = randomQuote.quote;
+      //The section on the HTML with the class named ".quote-text" is made to inherit the random API quote!
       
-      document.querySelector('.quote-author').textContent = randomQuote.author;   //The section on the HTML with the class named .quote-                                                                                        author is changed
-      
-      document.querySelector('.tweet').setAttribute('href', `https://twitter.com/intent/tweet?text=${randomQuote.quote} -${randomQuote.author}`);               //The HREF attribute with the element belonging to class named                                                                                ".tweet" is changed to the specific twitter path to make a new 
-                                              tweet. JavaScript ES6 template literals were used in the new custom URL path. 
+      document.querySelector('.quote-author').textContent = randomQuote.author;   
+      //The section on the HTML with the class named ".quote-author" is changed to inherit the random quote's author!
+      document.querySelector('.tweet').setAttribute('href',`https://twitter.com/intent/tweettext=${randomQuote.quote}-${randomQuote.author}`);               
+      //The HREF attribute with the element belonging to class named ".tweet" is changed to the specific twitter path to make a new tweet.          JavaScript ES6 template literals were used in the new custom URL path. 
                                               
-      document.querySelector('.new-quote').addEventListener('click', showQuote);  //The actual HTML button with the class of .new-quote                                                                                         will now initiate the function "showQuote"
-                                                                                          in order to get us a new quote 
-                                                                                              and start the transformation
+      document.querySelector('.new-quote').addEventListener('click', showQuote);  
+      //The actual HTML button with the class of .new-quote will now initiate the function "showQuote" in order to get us a new quote 
+          and start the transformation
     })
     .catch(function () {
       console.log("error");
-    });               // Here is some JavaScript goodness; We are able to create an error catching mechanism here in case 
+    });              
+}  // Here is some JavaScript goodness; We are able to create an error catching mechanism here in case 
                             something goes wrong with our operation!
-}
 
 showQuote();          // Remember to declare your function after you make it so we can get the ball rolling.
 
