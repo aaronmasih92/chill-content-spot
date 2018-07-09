@@ -15,25 +15,32 @@ Bootstrap was used. I did some CSS overrides because Bootstrap styling of certai
 # How the API call was done in JavaScript!
 
 ```javascript
-let url = 'https://talaikis.com/api/quotes/random/';
+let url = 'https://talaikis.com/api/quotes/random/'; //Here, we store the API URL into a variable.
 
-function showQuote() {
-  fetch(url)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function manipulateHTML(randomQuote) { 
-      document.querySelector('.quote-text').textContent = randomQuote.quote;
-      document.querySelector('.quote-author').textContent = randomQuote.author;
-      document.querySelector('.tweet').setAttribute('href', `https://twitter.com/intent/tweet?text=${randomQuote.quote} -${randomQuote.author}`);
-      document.querySelector('.new-quote').addEventListener('click', showQuote);
+function showQuote() {        //A function to get the quote to show.
+  fetch(url)                  //Fetching the URL and...
+    .then(function (response) {       
+      return response.json();       //We turn the data into readable JSON data!
+    })                              //The data transfers over to the next functions. Thanks .then!
+    .then(function manipulateHTML(randomQuote) {        // Here, this function is meant to literally manipulate HTML. Watch...
+      document.querySelector('.quote-text').textContent = randomQuote.quote;  //The section on the HTML with the class named .quote-text                                                                                    is made to inherit the random API quote!
+      
+      document.querySelector('.quote-author').textContent = randomQuote.author;   //The section on the HTML with the class named .quote-                                                                                        author is changed
+      
+      document.querySelector('.tweet').setAttribute('href', `https://twitter.com/intent/tweet?text=${randomQuote.quote} -${randomQuote.author}`);               //The HREF attribute with the element belonging to class named                                                                                ".tweet" is changed to the specific twitter path to make a new 
+                                              tweet. JavaScript ES6 template literals were used in the new custom URL path. 
+                                              
+      document.querySelector('.new-quote').addEventListener('click', showQuote);  //The actual HTML button with the class of .new-quote                                                                                         will now initiate the function "showQuote"
+                                                                                          in order to get us a new quote 
+                                                                                              and start the transformation
     })
     .catch(function () {
       console.log("error");
-    });
+    });               // Here is some JavaScript goodness; We are able to create an error catching mechanism here in case 
+                            something goes wrong with our operation!
 }
 
-showQuote();
+showQuote();          // Remember to declare your function after you make it so we can get the ball rolling.
 
 
 
