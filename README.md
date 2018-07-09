@@ -15,3 +15,8 @@ Bootstrap was used. I did some CSS overrides because Bootstrap styling of certai
 # How the API call was done in JavaScript!
 
 ```javascript
+
+
+
+
+
