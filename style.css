@@ -1,0 +1,90 @@
+body {
+    background-color: seagreen !important ;
+  }
+
+  a{
+    color:darkblue !important ;
+  }
+  .about{
+    background-color: white;
+    width: 15%;
+    margin-left:43%;
+  }
+  .container{
+      background-color: white !important;
+      width: 600px !important;
+      min-height:400px;
+  }
+  .quote-text {
+      padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    font-family: 'Kotta One', serif !important;
+   
+    
+  }
+  
+  .interface {
+    position: absolute;
+    display: flex;
+
+  }
+  
+  .button {
+    display: block;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #disclaimer{
+    padding-top: 140px;
+  }
+
+  footer{
+    padding-top:40px;
+    background-color: orangered;
+  }
+
+  #theTitle {
+    font-family: 'Monoton', cursive;
+    color: black;
+  }
+
+  .tweet {
+    background-color: #1da1f2;
+    text-decoration: none;
+    margin-left:30px;
+  }
+  
+  .new-quote {
+    background-color: fuchsia;
+    margin-left: 300px;
+  }
+  
+  hr {
+
+    height: 1px;
+    color: #ed1d61;
+    background: #ed1d61;
+    font-size: 0;
+    border: 0;
+}
+  h2{
+    font-family: 'Cardo', serif !important;
+
+  }
+  p {
+    font-family: 'Cardo', serif !important;
+
+  }
+  .quote-author {
+    font-family: 'Kotta One', serif;
+
+  }
+  #sectionTitle {
+    font-family: 'Kotta One', serif !important;
+
+  }
