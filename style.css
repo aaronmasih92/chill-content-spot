@@ -11,8 +11,9 @@ body {
     margin-left:43%;
   }
   .container{
+    border-radius: 15px !important;
       background-color: white !important;
-      width: 600px !important;
+      width: 650px !important;
       min-height:400px;
   }
   .quote-text {
@@ -61,7 +62,7 @@ body {
   
   .new-quote {
     background-color: fuchsia;
-    margin-left: 300px;
+    margin-left: 365px;
   }
   
   hr {
